@@ -1,33 +1,43 @@
+import Image from "next/image";
 import { Button } from "../Button";
+import logo from "../../assets/logo.svg";
+import Link from "next/link";
 
 export const Header = () => {
+  const headerStyle = { boxShadow: "0px 2px 32px -12px rgba(0, 0, 0, 0.3)" };
+
   return (
-    <div className="flex w-full h-20 px-4 py-3 justify-around ">
+    <div
+      style={headerStyle}
+      className="flex w-full h-19 px-4 py-4 justify-around items-center"
+    >
       <div className="flex w-full h-10 text-lg justify-start items-center">
-        logo
+        <Link href="/">
+          <Image src={logo} alt="CloudDrive logo" height={40} width={250} />
+        </Link>
       </div>
       <div className="flex justify-start items-start gap-5">
         <Button
-          text="FAQ"
+          content="FAQ"
           hoverColor="#E6EFF4"
           backgroundColor="#FFFFFF"
           textColor="black"
         />
         <Button
-          text="Cennik"
+          content="Cennik"
           hoverColor="#E6EFF4"
           backgroundColor="#FFFFFF"
           textColor="#000000"
         />
         <Button
-          text="Rejestracja"
+          content="Rejestracja"
           hoverColor="#E6EFF4"
           backgroundColor="#E6EFF4"
           textColor="#055F94"
           href="/register"
         />
         <Button
-          text="Logowanie"
+          content="Logowanie"
           hoverColor="#E6EFF4"
           backgroundColor="#055F94"
           textColor="white"
