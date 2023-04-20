@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_general_integrations",
+  "info": {
+    "displayName": "integrations",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "input": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.input"
+    },
+    "title": {
+      "type": "string"
+    },
+    "enabledIntegrations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.account-feature"
+    },
+    "proposedFeatures": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.account-feature"
+    }
+  }
+}

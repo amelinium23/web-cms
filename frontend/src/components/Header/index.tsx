@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <div
       style={headerStyle}
-      className="flex w-full h-19 px-4 py-4 justify-around items-center"
+      className="flex w-[90] h-19 px-4 py-4 justify-around items-center"
     >
       <div className="flex w-full h-10 text-lg justify-start items-center">
         <Link href="/">
@@ -21,7 +21,9 @@ export const Header = () => {
         </Link>
       </div>
       {isLoggedIn ? (
-        <div className="flex justify-start items-start gap-5"></div>
+        <div className="flex justify-end w-40 items-start gap-5">
+          <span className="text-md font-sans font-semibold">Cześć, Jacku!</span>
+        </div>
       ) : (
         <div className="flex justify-start items-start gap-5">
           <Button
@@ -34,7 +36,7 @@ export const Header = () => {
             content="Cennik"
             hoverColor="#E6EFF4"
             backgroundColor="#FFFFFF"
-            textColor="#000000"
+            textColor="white"
           />
           <Button
             content="Rejestracja"

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_general_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "hoverColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

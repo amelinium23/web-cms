@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "settings_pages",
+  "info": {
+    "singularName": "settings-page",
+    "pluralName": "settings-pages",
+    "displayName": "Settings Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.head"
+    },
+    "sidebar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.sidebar"
+    },
+    "prices": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.price-list"
+    }
+  }
+}

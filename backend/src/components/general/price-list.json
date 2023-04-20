@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_general_price_lists",
+  "info": {
+    "displayName": "Price List",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "isChoosed": {
+      "type": "boolean"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.account-feature"
+    }
+  }
+}

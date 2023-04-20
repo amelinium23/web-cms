@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_general_account_features",
+  "info": {
+    "displayName": "Account Feature"
+  },
+  "options": {},
+  "attributes": {
+    "feature": {
+      "type": "string"
+    },
+    "isAvailable": {
+      "type": "boolean"
+    }
+  }
+}

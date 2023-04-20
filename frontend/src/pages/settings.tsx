@@ -5,7 +5,7 @@ import { Sidebar } from "@/components/Sidebar";
 export default function Settings() {
   return (
     <Page title="Ustawienia">
-      <div className="flex flex-row gap-20 h-[93%] mt-0">
+      <div className="flex flex-row gap-20 h-full mt-1/12">
         <Sidebar />
         <Integrations />
       </div>
