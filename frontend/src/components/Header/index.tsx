@@ -8,7 +8,7 @@ export const Header = () => {
   const router = useRouter();
   const headerStyle = { boxShadow: "0px 2px 32px -12px rgba(0, 0, 0, 0.3)" };
 
-  const isLoggedIn = router.asPath === "/settings";
+  const isLoggedIn = router.route === "/settings";
 
   return (
     <div
@@ -20,34 +20,38 @@ export const Header = () => {
           <Image src={logo} alt="CloudDrive logo" height={40} width={250} />
         </Link>
       </div>
-      <div className="flex justify-start items-start gap-5">
-        <Button
-          content="FAQ"
-          hoverColor="#E6EFF4"
-          backgroundColor="#FFFFFF"
-          textColor="black"
-        />
-        <Button
-          content="Cennik"
-          hoverColor="#E6EFF4"
-          backgroundColor="#FFFFFF"
-          textColor="#000000"
-        />
-        <Button
-          content="Rejestracja"
-          hoverColor="#E6EFF4"
-          backgroundColor="#E6EFF4"
-          textColor="#055F94"
-          href="/register"
-        />
-        <Button
-          content="Logowanie"
-          hoverColor="#E6EFF4"
-          backgroundColor="#055F94"
-          textColor="white"
-          href="/login"
-        />
-      </div>
+      {isLoggedIn ? (
+        <div className="flex justify-start items-start gap-5"></div>
+      ) : (
+        <div className="flex justify-start items-start gap-5">
+          <Button
+            content="FAQ"
+            hoverColor="#E6EFF4"
+            backgroundColor="#FFFFFF"
+            textColor="black"
+          />
+          <Button
+            content="Cennik"
+            hoverColor="#E6EFF4"
+            backgroundColor="#FFFFFF"
+            textColor="#000000"
+          />
+          <Button
+            content="Rejestracja"
+            hoverColor="#E6EFF4"
+            backgroundColor="#E6EFF4"
+            textColor="#055F94"
+            href="/register"
+          />
+          <Button
+            content="Logowanie"
+            hoverColor="#E6EFF4"
+            backgroundColor="#055F94"
+            textColor="white"
+            href="/login"
+          />
+        </div>
+      )}
     </div>
   );
 };
