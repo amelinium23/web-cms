@@ -13,9 +13,9 @@ export const Sidebar = () => {
   return (
     <div
       style={containerStyle}
-      className="flex flex-col h-full p-6 w-2/12 items-stretch justify-between"
+      className="flex flex-col h-screen p-6 w-2/12 items-stretch justify-between"
     >
-      <div className="flex flex-col h-[80%] gap-2 justify-start items-baseline">
+      <div className="flex flex-col h-full gap-2 justify-start items-baseline">
         <Button
           textColor="#699FBF"
           content="Moje pliki"
@@ -29,7 +29,7 @@ export const Sidebar = () => {
           icon={<Image src={humans} width={20} height={20} alt="arrow" />}
         />
       </div>
-      <div className="flex flex-col h-[80%] justify-end items-center">xsss</div>
+      <div className="flex flex-col h-full justify-end items-center">xsss</div>
     </div>
   );
 };

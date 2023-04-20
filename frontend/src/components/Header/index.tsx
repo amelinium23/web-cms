@@ -3,6 +3,7 @@ import { Button } from "../Button";
 import logo from "../../assets/logo.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import gears from "../../assets/gears.svg";
 
 export const Header = () => {
   const router = useRouter();
@@ -21,8 +22,11 @@ export const Header = () => {
         </Link>
       </div>
       {isLoggedIn ? (
-        <div className="flex justify-end w-40 items-start gap-5">
-          <span className="text-md font-sans font-semibold">Cześć, Jacku!</span>
+        <div className="flex justify-end w-full items-center gap-5">
+          <div className="text-md font-sans font-semibold">Cześć, Jacku!</div>
+          <Link href="/settings">
+            <Image src={gears} width={40} height={40} alt="arrow" />
+          </Link>
         </div>
       ) : (
         <div className="flex justify-start items-start gap-5">

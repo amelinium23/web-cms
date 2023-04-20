@@ -1,7 +1,8 @@
 {
   "collectionName": "components_general_heads",
   "info": {
-    "displayName": "Head"
+    "displayName": "Head",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,6 +10,9 @@
       "type": "string",
       "required": true,
       "minLength": 1
+    },
+    "userText": {
+      "type": "string"
     }
   }
 }
