@@ -9,7 +9,7 @@ const font = Montserrat({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`w-full h-full ${font.className}`}>
+    <div className={`w-screen h-screen ${font.className}`}>
       <Header />
       <Component {...pageProps} />
     </div>

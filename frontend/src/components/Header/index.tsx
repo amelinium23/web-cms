@@ -23,7 +23,7 @@ export const Header = () => {
           text="Rejestracja"
           hoverColor="#E6EFF4"
           backgroundColor="#E6EFF4"
-          textColor="black"
+          textColor="#055F94"
           href="/register"
         />
         <Button
