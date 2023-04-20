@@ -40,7 +40,7 @@ export const Header = () => {
             content="Cennik"
             hoverColor="#E6EFF4"
             backgroundColor="#FFFFFF"
-            textColor="white"
+            textColor="black"
           />
           <Button
             content="Rejestracja"

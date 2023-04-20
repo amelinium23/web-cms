@@ -19,14 +19,28 @@ export const Button = ({
   icon,
   ...props
 }: ButtonProps) => {
-  const realTextColor = textColor.startsWith("#")
-    ? `text-[${textColor}]`
-    : `text-${textColor}`;
-  const buttonContent = href ? <Link href={href}>{content}</Link> : content;
-  const className = `flex gap-2 h-10 justify-center font-bold items-center rounded-xl px-2 ${realTextColor} hover:bg-[${hoverColor}] bg-[${backgroundColor}] text-md hover:cursor-pointer text-center disabled:bg-[#9BBFD4] hover:shadow-lg`;
+  const style = {
+    backgroundColor: backgroundColor,
+  };
+
+  const buttonContent = href ? (
+    <Link
+      style={{ color: textColor }}
+      className={`text-md text-center font-bold`}
+      href={href}
+    >
+      {content}
+    </Link>
+  ) : (
+    <p style={{ color: textColor }} className={`text-md text-center font-bold`}>
+      {content}
+    </p>
+  );
+
+  const className = `flex gap-2 h-10  justify-center items-center rounded-xl px-2 hover:bg-[${hoverColor}] disabled:bg-[#9BBFD4] hover:shadow-lg`;
 
   return (
-    <button className={className} {...props}>
+    <button style={style} className={className} {...props}>
       {icon && icon}
       {buttonContent}
     </button>

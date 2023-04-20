@@ -7,6 +7,7 @@ import { FormEvent } from "react";
 export default function Login() {
   const router = useRouter();
   const style = { boxShadow: "0px 2px 32px -12px rgba(0, 0, 0, 0.3)" };
+
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     router.push("/settings");
