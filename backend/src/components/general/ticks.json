@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_general_ticks",
+  "info": {
+    "displayName": "ticks"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
