@@ -1,3 +1,9 @@
+import { Page } from "@/components/Page";
+
 export default function Settings() {
-  return <div></div>;
+  return (
+    <Page title="Ustawienia">
+      <div></div>
+    </Page>
+  );
 }

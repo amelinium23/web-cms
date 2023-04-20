@@ -2,9 +2,13 @@ import Image from "next/image";
 import { Button } from "../Button";
 import logo from "../../assets/logo.svg";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const Header = () => {
+  const router = useRouter();
   const headerStyle = { boxShadow: "0px 2px 32px -12px rgba(0, 0, 0, 0.3)" };
+
+  const isLoggedIn = router.asPath === "/settings";
 
   return (
     <div
