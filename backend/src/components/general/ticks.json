@@ -1,11 +1,26 @@
 {
   "collectionName": "components_general_ticks",
   "info": {
-    "displayName": "ticks"
+    "displayName": "ticks",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "textColor": {
       "type": "string"
     }
   }

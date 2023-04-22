@@ -1,7 +1,8 @@
 import React from "react";
 import { PriceItem } from "./components/Price";
+import { PriceListProps } from "./types";
 
-export const PriceList = ({ isHomePage }: { isHomePage?: boolean }) => {
+export const PriceList = ({ isHomePage }: PriceListProps) => {
   const features = [
     { feature: "Darmowe 5 GB dostępnego miejsca", isAvailable: true },
     { feature: "Udostępnianie linków znajomym", isAvailable: true },
@@ -10,7 +11,7 @@ export const PriceList = ({ isHomePage }: { isHomePage?: boolean }) => {
   ];
 
   return isHomePage ? (
-    <div className="flex flex-row w-[85%] gap-8 bg-white">
+    <div className="flex flex-row gap-6 bg-white">
       <PriceItem title="Pakiet Light" features={features} />
       <PriceItem title="Pakiet Light" features={features} />
       <PriceItem title="Pakiet Pro" features={features} />

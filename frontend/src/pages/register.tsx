@@ -15,7 +15,7 @@ export default function Register() {
 
   return (
     <Page title="Rejestracja">
-      <div className="flex items-center h-[90%] justify-center">
+      <div className="flex items-center h-screen justify-center">
         <form
           style={style}
           onSubmit={onSubmit}

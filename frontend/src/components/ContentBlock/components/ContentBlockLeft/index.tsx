@@ -1,15 +1,25 @@
 import React from "react";
 import { ContentBlockProps } from "../../types";
+import { RichText } from "@/components/RichText";
+import {
+  imageContainerClassName,
+  shadowStyle,
+  textContainerClassName,
+  titleClassName,
+} from "../../constants";
 
-export const ContentBlockLeft = ({ title, description }: ContentBlockProps) => {
+export const ContentBlockLeft = ({
+  title,
+  description,
+  children,
+}: ContentBlockProps) => {
   return (
     <div className="flex h-full flex-row gap-4">
-      <div className="flex w-full p-4 flex-col gap-4 items-center justify-center flex-wrap">
-        image
-      </div>
-      <div className="flex w-full p-4 flex-col gap-4 flex-wrap">
-        <h2 className="text-3xl">{title}</h2>
-        <p className="text-lg">{description}</p>
+      <div className={imageContainerClassName}>image</div>
+      <div style={shadowStyle} className={textContainerClassName}>
+        <h2 className={titleClassName}>{title}</h2>
+        <RichText markdown={description} />
+        {children}
       </div>
     </div>
   );

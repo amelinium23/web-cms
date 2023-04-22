@@ -1,22 +1,32 @@
 {
   "collectionName": "components_blocks_content_blocks",
   "info": {
-    "displayName": "Content Block"
+    "displayName": "Content Block",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "title": {
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "richtext"
+    },
+    "imageLeft": {
+      "type": "boolean"
+    },
+    "tiles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "general.ticks"
     }
   }
 }
