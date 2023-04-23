@@ -53,7 +53,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'web-cms-i'
+          app-name: 'strapi-on-azure'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_07E058DDADC9426B8145A8BE477C705D }}
-          package: ./backend/build
+          package: .
