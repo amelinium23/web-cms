@@ -48,7 +48,7 @@ jobs:
         with:
           name: node-app
       - name: 'Untar files'
-        run: 'ls -at && pwd && tar -xf node-app.tar'
+        run: 'tar -xf node-app.tar'
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
