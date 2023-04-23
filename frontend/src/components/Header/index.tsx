@@ -4,12 +4,15 @@ import logo from "../../assets/logo.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import gears from "../../assets/gears.svg";
+import { useHeader } from "@/hooks/useHeader";
 
 export const Header = () => {
   const router = useRouter();
+  const data = useHeader();
   const headerStyle = { boxShadow: "0px 2px 32px -12px rgba(0, 0, 0, 0.3)" };
 
   const isLoggedIn = router.route === "/settings";
+  console.debug(data);
 
   return (
     <div
