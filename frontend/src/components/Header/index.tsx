@@ -9,6 +9,7 @@ import { useHeader } from "@/hooks/useHeader";
 export const Header = () => {
   const router = useRouter();
   const data = useHeader();
+  console.log(data);
   const headerStyle = { boxShadow: "0px 2px 32px -12px rgba(0, 0, 0, 0.3)" };
 
   const isLoggedIn = router.route === "/settings";
