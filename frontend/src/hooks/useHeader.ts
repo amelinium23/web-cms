@@ -1,17 +1,16 @@
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 
-const getHeaderData = async () => {
-  return (await axios.get("http://127.0.0.1:1337/api/header")).data;
-};
-
 export const useHeader = () => {
-  const { data, isError } = useQuery({
+  const { data, isLoading } = useQuery({
     queryKey: ["header"],
-    queryFn: getHeaderData,
+    queryFn: () =>
+      axios
+        .get("http://localhost:1337/api/header?populate=deep")
+        .then((res) => res.data),
   });
 
-  if (isError) return {};
+  if (isLoading) return { data: null, isLoading: true };
 
-  return data;
+  return { data: data.attributes, isLoading };
 };

@@ -6,11 +6,13 @@ import {
   textContainerClassName,
   titleClassName,
 } from "../../constants";
+import Image from "next/image";
 
 export const ContentBlockRight = ({
   title,
   description,
   children,
+  imageSrc,
 }: ContentBlockProps) => {
   return (
     <div className="flex h-full flex-row gap-4">
@@ -19,7 +21,14 @@ export const ContentBlockRight = ({
         <RichText markdown={description} />
         <div>{children}</div>
       </div>
-      <div className={imageContainerClassName}>image</div>
+      <div className={imageContainerClassName}>
+        <Image
+          src={"http://localhost:1337" + imageSrc}
+          width={200}
+          height={200}
+          alt="placeholder"
+        />
+      </div>
     </div>
   );
 };

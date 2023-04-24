@@ -24,6 +24,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "message": {
+      "type": "string"
     }
   }
 }

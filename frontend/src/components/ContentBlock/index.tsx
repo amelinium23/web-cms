@@ -6,15 +6,26 @@ export const ContentBlock = ({
   title,
   description,
   imageLeft,
-  tiles,
+  tags,
   children,
+  imageSrc,
 }: ContentBlockProps) => {
   return imageLeft ? (
-    <ContentBlockLeft title={title} description={description} tiles={tiles}>
+    <ContentBlockLeft
+      title={title}
+      description={description}
+      tags={tags}
+      imageSrc={imageSrc}
+    >
       {children}
     </ContentBlockLeft>
   ) : (
-    <ContentBlockRight title={title} description={description} tiles={tiles}>
+    <ContentBlockRight
+      title={title}
+      description={description}
+      tags={tags}
+      imageSrc={imageSrc}
+    >
       {children}
     </ContentBlockRight>
   );

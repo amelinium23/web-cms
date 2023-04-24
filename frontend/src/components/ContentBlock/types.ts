@@ -4,6 +4,7 @@ export type ContentBlockProps = {
   title: string;
   description: string;
   imageLeft?: boolean;
-  tiles?: any[];
+  imageSrc: string;
+  tags?: any[];
   children?: ReactNode;
 };
