@@ -11,7 +11,7 @@ export const PriceList = ({ isHomePage }: PriceListProps) => {
   ];
 
   return isHomePage ? (
-    <div className="flex w-[62%] flex-row gap-6 bg-white">
+    <div className="flex w-full flex-row gap-6 bg-white">
       <PriceItem title="Pakiet Light" features={features} />
       <PriceItem title="Pakiet Light" features={features} />
       <PriceItem title="Pakiet Pro" features={features} />

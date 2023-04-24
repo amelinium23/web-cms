@@ -26,7 +26,10 @@ export default function Home() {
 
   return (
     <Page title={header.title}>
-      <main className="flex flex-col h-full w-full justify-center items-center gap-10 px-20 py-20 my-auto mx-auto">
+      <main
+        style={{ maxWidth: "1300px" }}
+        className="flex flex-col h-full justify-center items-center gap-10 px-20 py-20 my-auto mx-auto"
+      >
         {content.slice(0, 1).map((contentBlock: any) => (
           <ContentBlock
             imageSrc={contentBlock.image.data.attributes.url}
@@ -43,7 +46,10 @@ export default function Home() {
             />
           </ContentBlock>
         ))}
-        <div className="flex flex-col w-full items-center justify-center mx-auto">
+        <div
+          style={{ width: "1130px" }}
+          className="flex flex-col items-center justify-center mx-auto"
+        >
           <PriceList isHomePage />
         </div>
         {content.slice(1).map((contentBlock: any) => (

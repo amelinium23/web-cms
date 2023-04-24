@@ -13,11 +13,34 @@ export const ContentBlockRight = ({
   description,
   children,
   imageSrc,
+  tags,
 }: ContentBlockProps) => {
+  if (!tags) return <></>;
+
   return (
     <div className="flex h-full flex-row gap-4">
       <div style={shadowStyle} className={textContainerClassName}>
         <h2 className={titleClassName}>{title}</h2>
+        <div className="flex flex-row w-full gap-4">
+          {tags.map((tag) => (
+            <div
+              style={{
+                color: tag.textColor,
+                backgroundColor: tag.backgroundColor,
+              }}
+              className="flex flex-row gap-1 p-1 font-semibold items-center justify-center rounded-xl"
+              key={tag.name}
+            >
+              <Image
+                src={"http://localhost:1337" + tag.icon.data.attributes.url}
+                width={20}
+                height={20}
+                alt=""
+              />
+              {tag.name}
+            </div>
+          ))}
+        </div>
         <RichText markdown={description} />
         <div>{children}</div>
       </div>

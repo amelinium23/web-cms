@@ -5,6 +5,16 @@ export type ContentBlockProps = {
   description: string;
   imageLeft?: boolean;
   imageSrc: string;
-  tags?: any[];
+  tags?: Tag[];
   children?: ReactNode;
+};
+
+export type Tag = {
+  name: string;
+  id: number;
+  backgroundColor: string;
+  textColor: string;
+  icon: {
+    data: { attributes: { url: string } };
+  };
 };
