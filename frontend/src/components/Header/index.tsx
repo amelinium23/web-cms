@@ -56,7 +56,7 @@ export const Header = () => {
               textColor: string;
               hoverColor?: string;
               content: string;
-              href?: string;
+              link?: string;
               icon?: ReactNode;
             }) => (
               <Button
@@ -65,6 +65,7 @@ export const Header = () => {
                 hoverColor={button.hoverColor}
                 backgroundColor={button.backgroundColor}
                 textColor={button.textColor}
+                href={button.link}
               />
             )
           )}
