@@ -13,7 +13,6 @@ export default function Home() {
   if (!data || !settingsPageData) return <></>;
   const { header, content } = data;
   const { prices } = settingsPageData;
-  console.log(header);
 
   return (
     <Page title={header.title || "CloudDrive"}>

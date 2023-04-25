@@ -4,13 +4,13 @@ import { StrapiHomPageResponse } from "@/types";
 import { content } from "./constants";
 
 export const mapHomePage = (data: StrapiHomPageResponse) => {
-  if (!data) return { content, header: { title: "Strona Główna" } };
+  if (!data) return { content, header: { title: "CloudDrive" } };
 
   const { data: cmsData } = data;
 
   return {
     content: cmsData.attributes.content || content,
-    header: cmsData.attributes.header || { header: { title: "Strona Główna" } },
+    header: cmsData.attributes.header || { header: { title: "CloudDrive" } },
   };
 };
 
