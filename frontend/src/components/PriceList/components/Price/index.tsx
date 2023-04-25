@@ -25,9 +25,10 @@ export const PriceItem = ({
         {title}
       </h3>
       {features.map((feature) => (
-        <div className="flex flex-row gap-2 h-6" key={feature.feature}>
+        <div className="flex flex-row gap-2" key={feature.feature}>
+          {feature.isAvailable ? enabledIcon : disabledIcon}
           <p style={textStyle} className="text-md">
-            {feature.isAvailable ? enabledIcon : disabledIcon} {feature.feature}
+            {feature.feature}
           </p>
         </div>
       ))}

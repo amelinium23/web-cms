@@ -1,6 +1,8 @@
 import React from "react";
 import { PriceItem } from "./components/Price";
 import { PriceListProps } from "./types";
+import Image from "next/image";
+import { checkMark, xMark } from "@/assets";
 
 export const PriceList = ({ isHomePage, prices }: PriceListProps) => {
   return isHomePage ? (
@@ -10,6 +12,14 @@ export const PriceList = ({ isHomePage, prices }: PriceListProps) => {
           key={price.name}
           title={price.name}
           features={price.features}
+          textColor={price.textColor as `#${string}`}
+          backgroundColor={price.backgroundColor as `#${string}`}
+          enabledIcon={
+            <Image src={checkMark} alt="You got it" width={20} height={20} />
+          }
+          disabledIcon={
+            <Image src={xMark} alt="You got it" width={20} height={20} />
+          }
         />
       ))}
     </div>
@@ -24,6 +34,12 @@ export const PriceList = ({ isHomePage, prices }: PriceListProps) => {
             features={price.features}
             backgroundColor={price.backgroundColor as `#${string}`}
             textColor={price.textColor as `#${string}`}
+            enabledIcon={
+              <Image src={checkMark} alt="You got it" width={20} height={20} />
+            }
+            disabledIcon={
+              <Image src={xMark} alt="You got it" width={20} height={20} />
+            }
           />
         ))}
       </div>

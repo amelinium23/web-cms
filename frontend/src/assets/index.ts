@@ -8,6 +8,7 @@ import thirdContentBlock from "./content-block-3.svg";
 import fourthContentBlock from "./content-block-4.svg";
 import fifthContentBlock from "./content-block-5.svg";
 import checkMark from "./check-mark.svg";
+import xMark from "./x-mark.svg";
 
 export {
   arrow,
@@ -20,4 +21,5 @@ export {
   thirdContentBlock,
   fourthContentBlock,
   fifthContentBlock,
+  xMark,
 };
