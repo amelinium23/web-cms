@@ -28,6 +28,8 @@ export default function Home() {
             imageLeft={contentBlock.imageLeft}
           >
             <Button
+              href="/"
+              hoverColor="#055F94"
               backgroundColor="white"
               content="Czytaj dalej"
               textColor="#055F94"

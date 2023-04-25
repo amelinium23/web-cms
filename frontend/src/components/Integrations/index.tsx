@@ -1,24 +1,30 @@
+import Image from "next/image";
 import { Input } from "../Input";
 import { Integration } from "./components/Integration";
+import { checkMark } from "@/assets";
 
 export const Integrations = () => {
   const addedIntegrations = [
-    { name: "Google Docs", icon: <></> },
-    { name: "Google Sheets", icon: <></> },
-    { name: "Google Slides", icon: <></> },
+    {
+      name: "Google Docs",
+      icon: <Image src={checkMark} alt="check-mark" height={20} />,
+    },
+    {
+      name: "Google Sheets",
+      icon: <Image src={checkMark} alt="check-mark" height={20} />,
+    },
+    {
+      name: "Google Slides",
+      icon: <Image src={checkMark} alt="check-mark" height={20} />,
+    },
   ];
 
   const proposedIntegrations = [
-    { name: "Google Docs" },
-    { name: "Google Sheets" },
-    { name: "Google Slides" },
-    { name: "Google Slides" },
-    { name: "Google Slides" },
-    { name: "Google Slides" },
-    { name: "Google Slides" },
-    { name: "Google Slides" },
-    { name: "Google Slides" },
-    { name: "Google Slides" },
+    { name: "Dropbox" },
+    { name: "WeTransfer" },
+    { name: "Lumio" },
+    { name: "Google Forms" },
+    { name: "Google Maps" },
   ];
 
   return (

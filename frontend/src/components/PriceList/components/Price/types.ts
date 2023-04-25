@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type Feature = {
   feature: string;
   isAvailable: boolean;
@@ -6,5 +8,7 @@ export type Feature = {
 export type PriceItemProps = {
   title: string;
   features: Feature[];
-  children?: React.ReactNode;
+  backgroundColor?: `#${string}`;
+  textColor?: `#${string}`;
+  children?: ReactNode;
 };

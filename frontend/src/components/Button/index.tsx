@@ -4,9 +4,9 @@ import { HTMLProps, ReactNode, ReactSVGElement } from "react";
 type ButtonProps = {
   backgroundColor: string;
   textColor: string;
-  hoverColor?: string;
+  hoverColor: string | null;
+  href: string | null;
   content: string;
-  href?: string;
   icon?: ReactNode;
 } & Omit<HTMLProps<HTMLButtonElement>, "type">;
 

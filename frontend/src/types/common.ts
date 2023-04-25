@@ -59,10 +59,10 @@ export enum Provider {
 export interface Button {
   id: number;
   content: string;
-  hoverColor: string;
+  hoverColor: string | null;
   backgroundColor: string;
   textColor: string;
-  link: string;
+  link: string | null;
 }
 
 export interface Tag {
@@ -80,4 +80,10 @@ export interface Input {
   backgroundColor: null;
   hoverBackgroundColor: null;
   type: string;
+}
+
+export interface Header {
+  id: number;
+  title: string;
+  userText: null | string;
 }

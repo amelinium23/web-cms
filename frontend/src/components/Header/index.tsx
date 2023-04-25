@@ -40,7 +40,7 @@ export const Header = () => {
               hoverColor={button.hoverColor}
               backgroundColor={button.backgroundColor}
               textColor={button.textColor}
-              href={button.link}
+              href={button.link as string}
             />
           ))}
         </div>

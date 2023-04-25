@@ -26,6 +26,11 @@
       "type": "component",
       "repeatable": true,
       "component": "general.price-list"
+    },
+    "integrations": {
+      "type": "component",
+      "repeatable": false,
+      "component": "general.integrations"
     }
   }
 }

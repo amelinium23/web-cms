@@ -15,14 +15,10 @@
       "type": "string"
     },
     "enabledIntegrations": {
-      "type": "component",
-      "repeatable": true,
-      "component": "general.account-feature"
+      "type": "json"
     },
-    "proposedFeatures": {
-      "type": "component",
-      "repeatable": true,
-      "component": "general.account-feature"
+    "proposedIntegrations": {
+      "type": "json"
     }
   }
 }

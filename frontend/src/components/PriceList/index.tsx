@@ -21,13 +21,26 @@ export const PriceList = ({ isHomePage }: PriceListProps) => {
       <h2 className="text-2xl font-bold">Cennik</h2>
       <div className="flex flex-row w-full gap-8 justify-around">
         <div className="flex flex-col w-full p-6 bg-[#E6EEE6] gap-4 rounded-3xl">
-          <PriceItem title="Pakiet Light" features={features} />
+          <PriceItem
+            title="Pakiet Light"
+            backgroundColor="#E6EEE6"
+            features={features}
+          />
         </div>
-        <div className="flex flex-col w-full p-6 bg-[#E6EEE6] gap-4 rounded-3xl">
-          <PriceItem title="Pakiet Light" features={features} />
+        <div className="flex flex-col w-full p-6 bg-[#9BBFD4] gap-4 rounded-3xl">
+          <PriceItem
+            title="Pakiet Light"
+            backgroundColor="#9BBFD4"
+            textColor="#033959"
+            features={features}
+          />
         </div>
-        <div className="flex flex-col w-full p-6 bg-[#E6EEE6] gap-4 rounded-3xl">
-          <PriceItem title="Pakiet Pro" features={features} />
+        <div className="flex flex-col w-full p-6 bg-[#28666E] gap-4 rounded-3xl">
+          <PriceItem
+            title="Pakiet Pro"
+            backgroundColor="#28666E"
+            features={features}
+          />
         </div>
       </div>
     </div>
