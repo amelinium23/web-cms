@@ -36,6 +36,8 @@ export interface Price {
   name: string;
   isChoosed: boolean;
   features: Feature[];
+  backgroundColor: string;
+  textColor: string;
 }
 
 export interface Feature {

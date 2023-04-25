@@ -14,8 +14,8 @@ export default function Settings() {
       <div className="flex flex-row gap-20 mt-1/12">
         <Sidebar sidebar={data.sidebar} />
         <div className="flex flex-col gap-8">
-          <Integrations />
-          <PriceList />
+          <Integrations integrations={data.integrations} />
+          <PriceList prices={data.prices} />
         </div>
       </div>
     </Page>

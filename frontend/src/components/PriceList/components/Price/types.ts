@@ -10,5 +10,7 @@ export type PriceItemProps = {
   features: Feature[];
   backgroundColor?: `#${string}`;
   textColor?: `#${string}`;
+  enabledIcon?: ReactNode;
+  disabledIcon?: ReactNode;
   children?: ReactNode;
 };

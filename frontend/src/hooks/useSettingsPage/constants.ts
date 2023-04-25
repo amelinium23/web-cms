@@ -66,11 +66,54 @@ export const proposedIntegrations = [
   },
 ];
 
+export const integrations = {
+  id: 1,
+  title: "Integracje",
+  enabledIntegrations: [
+    {
+      name: "Google Docs",
+    },
+    {
+      name: "Google Sheets",
+    },
+    {
+      name: "Google Slides",
+    },
+  ],
+  proposedIntegrations: [
+    {
+      name: "Dropbox",
+    },
+    {
+      name: "WeTransfer",
+    },
+    {
+      name: "Lumio",
+    },
+    {
+      name: "Google Forms",
+    },
+    {
+      name: "Google Maps",
+    },
+  ],
+  input: {
+    id: 7,
+    label: "Wyszukaj integracje",
+    placeholder: "Wyszukaj integracje",
+    backgroundColor: null,
+    hoverBackgroundColor: null,
+    type: "text",
+  },
+};
+
 export const prices = [
   {
     id: 1,
     name: "Pakiet Zero",
     isChoosed: true,
+    backgroundColor: "#E6EEE6",
+    textColor: "#004106",
     features: [
       {
         id: 1,
@@ -98,6 +141,8 @@ export const prices = [
     id: 2,
     name: "Pakiet Premium",
     isChoosed: false,
+    backgroundColor: "#9BBFD4",
+    textColor: "#033959",
     features: [
       {
         id: 5,
@@ -125,6 +170,8 @@ export const prices = [
     id: 3,
     name: "Pakiet Pro",
     isChoosed: false,
+    backgroundColor: "#28666E",
+    textColor: "#CCEDFF",
     features: [
       {
         id: 9,

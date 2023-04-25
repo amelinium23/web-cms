@@ -3,8 +3,8 @@ import {
   buttons,
   header,
   input,
+  integrations,
   prices,
-  proposedIntegrations,
   sidebar,
 } from "./constants";
 import axios from "axios";
@@ -14,7 +14,7 @@ const defaultSettingsPageData = {
   input: input,
   header: header,
   buttons: buttons,
-  proposedIntegrations: proposedIntegrations,
+  integrations: integrations,
   prices: prices,
   sidebar: sidebar,
 };
@@ -27,8 +27,7 @@ const mapSettingsPage = (settingsPageData: StrapiSettingsPageResponse) => {
     input: data.attributes.integrations.input || input,
     header: data.attributes.header || header,
     buttons: data.attributes.sidebar.buttons || buttons,
-    proposedIntegrations:
-      data.attributes.integrations.proposedIntegrations || proposedIntegrations,
+    integrations: integrations,
     prices: data.attributes.prices || prices,
     sidebar: data.attributes.sidebar || sidebar,
   };
