@@ -15,7 +15,7 @@ export const ContentBlock = ({
       title={title}
       description={description}
       tags={tags}
-      imageSrc={imageSrc}
+      imageSrc={""}
     >
       {children}
     </ContentBlockLeft>
@@ -24,7 +24,7 @@ export const ContentBlock = ({
       title={title}
       description={description}
       tags={tags}
-      imageSrc={imageSrc}
+      imageSrc={""}
     >
       {children}
     </ContentBlockRight>

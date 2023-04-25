@@ -41,12 +41,7 @@ export const ContentBlockLeft = ({
               className="flex flex-row gap-2 p-1 font-semibold items-center justify-center rounded-xl"
               key={tag.name}
             >
-              <Image
-                src={"http://localhost:1337" + tag.icon.data.attributes.url}
-                width={20}
-                height={20}
-                alt=""
-              />
+              {/* <Image src={} width={20} height={20} alt="" /> */}
               {tag.name}
             </div>
           ))}

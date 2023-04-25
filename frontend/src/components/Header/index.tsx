@@ -3,28 +3,16 @@ import { Button } from "../Button";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import gears from "../../assets/gears.svg";
-import { ReactNode } from "react";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
+import { useHeader } from "@/hooks/useHeader";
 
 export const Header = () => {
   const router = useRouter();
-  const { data: cmsData, isLoading } = useQuery({
-    queryKey: ["header"],
-    queryFn: () =>
-      axios
-        .get("http://localhost:1337/api/header?populate=deep")
-        .then((res) => res.data),
-  });
+  const data = useHeader();
   const headerStyle = { boxShadow: "0px 2px 32px -12px rgba(0, 0, 0, 0.3)" };
   const isLoggedIn = router.route === "/settings";
 
-  if (!cmsData && isLoading) return <></>;
-  const { data } = cmsData;
-  const { attributes } = data;
-  const { buttons, logo, message } = attributes;
-
-  if (!attributes || !logo) return <></>;
+  if (!data || !data.logo) return <></>;
+  const { logo, message, buttons } = data;
 
   return (
     <div
@@ -33,12 +21,7 @@ export const Header = () => {
     >
       <div className="flex w-full h-10 text-lg justify-start items-center">
         <Link href="/">
-          <Image
-            src={"http://localhost:1337" + logo.data.attributes.url}
-            alt="CloudDrive logo"
-            height={40}
-            width={250}
-          />
+          <Image src={logo} alt="CloudDrive logo" height={40} width={250} />
         </Link>
       </div>
       {isLoggedIn ? (
@@ -50,25 +33,16 @@ export const Header = () => {
         </div>
       ) : (
         <div className="flex justify-start items-start gap-5">
-          {buttons.map(
-            (button: {
-              backgroundColor: string;
-              textColor: string;
-              hoverColor?: string;
-              content: string;
-              link?: string;
-              icon?: ReactNode;
-            }) => (
-              <Button
-                key={`${button.content}-${button.backgroundColor}`}
-                content={button.content}
-                hoverColor={button.hoverColor}
-                backgroundColor={button.backgroundColor}
-                textColor={button.textColor}
-                href={button.link}
-              />
-            )
-          )}
+          {buttons.map((button) => (
+            <Button
+              key={`${button.content}-${button.backgroundColor}`}
+              content={button.content}
+              hoverColor={button.hoverColor}
+              backgroundColor={button.backgroundColor}
+              textColor={button.textColor}
+              href={button.link}
+            />
+          ))}
         </div>
       )}
     </div>

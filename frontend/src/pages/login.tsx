@@ -23,8 +23,6 @@ export default function Login() {
     router.push("/settings");
   };
 
-  console.log(cmsData);
-
   if (!cmsData) return <></>;
   const { data } = cmsData;
   const { attributes } = data;

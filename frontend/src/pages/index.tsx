@@ -2,27 +2,15 @@ import { Button } from "@/components";
 import { ContentBlock } from "@/components/ContentBlock";
 import { Page } from "@/components/Page";
 import { PriceList } from "@/components/PriceList";
+import { useHomePage } from "@/hooks/useHomePage/useHomePage";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 export default function Home() {
-  const { data: cmsData, isLoading } = useQuery({
-    queryKey: ["home-page"],
-    queryFn: () =>
-      axios
-        .get("http://localhost:1337/api/home-page?populate=deep")
-        .then((res) => res.data),
-  });
+  const data = useHomePage();
 
-  if (isLoading) return null;
-
-  if (!cmsData) return <></>;
-
-  const { data } = cmsData;
-  const { attributes } = data;
-  const { header, content } = attributes;
-
-  if (!header || !content) return <></>;
+  if (!data) return <></>;
+  const { header, content } = data;
 
   return (
     <Page title={header.title}>
@@ -30,9 +18,9 @@ export default function Home() {
         style={{ maxWidth: "1300px" }}
         className="flex flex-col h-full justify-center items-center gap-10 px-20 py-20 my-auto mx-auto"
       >
-        {content.slice(0, 1).map((contentBlock: any) => (
+        {content.slice(0, 2).map((contentBlock: any) => (
           <ContentBlock
-            imageSrc={contentBlock.image.data.attributes.url}
+            imageSrc={""}
             key={contentBlock.title}
             title={contentBlock.title}
             description={contentBlock.description}
@@ -52,9 +40,9 @@ export default function Home() {
         >
           <PriceList isHomePage />
         </div>
-        {content.slice(1).map((contentBlock: any) => (
+        {content.slice(2).map((contentBlock: any) => (
           <ContentBlock
-            imageSrc={contentBlock.image.data.attributes.url}
+            imageSrc={""}
             key={contentBlock.title}
             title={contentBlock.title}
             description={contentBlock.description}

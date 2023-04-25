@@ -4,7 +4,7 @@ const imageContainerClassName =
   "flex w-full p-4 flex-col gap-4 items-center justify-center flex-wrap";
 
 const textContainerClassName =
-  "flex w-full p-10 rounded-3xl flex-col gap-5 flex-wrap";
+  "flex w-full p-12 rounded-3xl flex-col gap-5 flex-wrap";
 
 const shadowStyle = {
   boxShadow:
