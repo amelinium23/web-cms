@@ -1,4 +1,4 @@
-import { ImageData } from "@/types";
+import { ImageData, StrapiMediaResponse } from "@/types";
 import { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 
@@ -16,5 +16,5 @@ export type Tag = {
   id: number;
   backgroundColor: string;
   textColor: string;
-  icon: ImageData | StaticImageData;
+  icon: StrapiMediaResponse | StaticImageData;
 };

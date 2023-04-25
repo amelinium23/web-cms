@@ -7,6 +7,7 @@ import {
   titleClassName,
 } from "../../constants";
 import Image from "next/image";
+import { checkMark } from "@/assets";
 
 export const ContentBlockRight = ({
   title,
@@ -21,17 +22,17 @@ export const ContentBlockRight = ({
     <div className="flex h-full flex-row gap-4">
       <div style={shadowStyle} className={textContainerClassName}>
         <h2 className={titleClassName}>{title}</h2>
-        <div className="flex flex-row w-full gap-4">
+        <div className="flex flex-row flex-wrap w-full gap-4">
           {tags.map((tag) => (
             <div
               style={{
                 color: tag.textColor,
                 backgroundColor: tag.backgroundColor,
               }}
-              className="flex flex-row gap-1 p-1 font-semibold items-center justify-center rounded-xl"
+              className="flex flex-row px-2 py-1 font-semibold items-center justify-center rounded-xl"
               key={tag.name}
             >
-              {/* <Image src={} width={20} height={20} alt="" /> */}
+              <Image src={checkMark} width={20} height={20} alt="" />
               {tag.name}
             </div>
           ))}
@@ -40,12 +41,7 @@ export const ContentBlockRight = ({
         <div>{children}</div>
       </div>
       <div className={imageContainerClassName}>
-        <Image
-          src={"http://localhost:1337" + imageSrc}
-          width={200}
-          height={200}
-          alt="placeholder"
-        />
+        <Image src={imageSrc} width={300} height={300} alt="placeholder" />
       </div>
     </div>
   );

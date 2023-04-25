@@ -1,6 +1,7 @@
 import { ContentBlockLeft } from "./components/ContentBlockLeft";
 import { ContentBlockRight } from "./components/ContentBlockRight";
 import { ContentBlockProps } from "./types";
+import { StaticImageData } from "next/image";
 
 export const ContentBlock = ({
   title,
@@ -15,7 +16,7 @@ export const ContentBlock = ({
       title={title}
       description={description}
       tags={tags}
-      imageSrc={""}
+      imageSrc={imageSrc}
     >
       {children}
     </ContentBlockLeft>
@@ -24,7 +25,7 @@ export const ContentBlock = ({
       title={title}
       description={description}
       tags={tags}
-      imageSrc={""}
+      imageSrc={imageSrc}
     >
       {children}
     </ContentBlockRight>

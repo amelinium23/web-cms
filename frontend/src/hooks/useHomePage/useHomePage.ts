@@ -15,15 +15,13 @@ export const mapHomePage = (data: StrapiHomPageResponse) => {
 };
 
 export const useHomePage = () => {
-  const { data, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ["header"],
     queryFn: () =>
       axios
         .get("http://localhost:1337/api/home-page?populate=deep")
         .then((res) => res.data),
   });
-
-  if (isLoading) return null;
 
   return mapHomePage(data);
 };
