@@ -19,6 +19,8 @@ const defaultSettingsPageData = {
   sidebar: sidebar,
 };
 
+const url = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:1337/api/";
+
 const mapSettingsPage = (settingsPageData: StrapiSettingsPageResponse) => {
   if (!settingsPageData) return defaultSettingsPageData;
   const { data } = settingsPageData;
@@ -37,9 +39,7 @@ export const useSettingsPage = () => {
   const { data } = useQuery({
     queryKey: ["settingsPage"],
     queryFn: () =>
-      axios
-        .get("http://localhost:1337/api/settings-page?populate=deep")
-        .then((res) => res.data),
+      axios.get(`${url}settings-page?populate=deep`).then((res) => res.data),
   });
 
   return mapSettingsPage(data);

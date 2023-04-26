@@ -9,6 +9,8 @@ const defaultResponse = {
   header: header,
 };
 
+const url = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:1337/api/";
+
 const mapRegisterPage = (data: StrapiRegisterPageResponse) => {
   if (!data) return defaultResponse;
 
@@ -23,9 +25,7 @@ export const useRegisterPage = () => {
   const { data } = useQuery({
     queryKey: ["register"],
     queryFn: () =>
-      axios
-        .get("http://localhost:1337/api/register-page?populate=deep")
-        .then((res) => res.data),
+      axios.get(`${url}/register-page?populate=deep`).then((res) => res.data),
   });
   return mapRegisterPage(data);
 };

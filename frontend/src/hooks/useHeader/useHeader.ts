@@ -4,7 +4,7 @@ import { StrapiHeaderResponse } from "@/types";
 import { logo } from "@/assets";
 import { buttons } from "./constants";
 
-const url = process.env.NEXT_PUBLIC_CMS_URL;
+const url = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:1337/api/";
 
 export const mapHeader = (data: StrapiHeaderResponse) => {
   if (!data) return { logo, buttons, message: "Cześć, Jacek!" };
