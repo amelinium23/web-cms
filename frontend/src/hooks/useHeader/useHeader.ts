@@ -4,6 +4,8 @@ import { StrapiHeaderResponse } from "@/types";
 import { logo } from "@/assets";
 import { buttons } from "./constants";
 
+const url = process.env.NEXT_PUBLIC_CMS_URL;
+
 export const mapHeader = (data: StrapiHeaderResponse) => {
   if (!data) return { logo, buttons, message: "Cześć, Jacek!" };
   const { data: cmsData } = data;
@@ -19,9 +21,7 @@ export const useHeader = () => {
   const { data } = useQuery({
     queryKey: ["header"],
     queryFn: () =>
-      axios
-        .get("http://localhost:1337/api/header?populate=deep")
-        .then((res) => res.data),
+      axios.get(`${url}header?populate=deep`).then((res) => res.data),
   });
 
   return mapHeader(data);
