@@ -25,7 +25,7 @@ export const useRegisterPage = () => {
   const { data } = useQuery({
     queryKey: ["register"],
     queryFn: () =>
-      axios.get(`${url}/register-page?populate=deep`).then((res) => res.data),
+      axios.get(`${url}register-page?populate=deep`).then((res) => res.data),
   });
   return mapRegisterPage(data);
 };
