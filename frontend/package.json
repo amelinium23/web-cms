@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "start:prod": "cd frontend && echo 'NEXT_PUBLIC_API_URL='https://web-cms-i.onrender.com/api/' > .env && npm run dev",
     "lint": "next lint"
   },
   "dependencies": {
