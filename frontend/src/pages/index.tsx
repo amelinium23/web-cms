@@ -4,7 +4,6 @@ import { Page } from "@/components/Page";
 import { PriceList } from "@/components/PriceList";
 import { useSettingsPage } from "@/hooks";
 import { useHomePage } from "@/hooks/useHomePage/useHomePage";
-import { Content } from "@/types";
 
 export default function Home() {
   const data = useHomePage();

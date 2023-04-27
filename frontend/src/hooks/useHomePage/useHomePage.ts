@@ -18,7 +18,7 @@ export const mapHomePage = (data: StrapiHomPageResponse) => {
 
 export const useHomePage = () => {
   const { data } = useQuery({
-    queryKey: ["header"],
+    queryKey: ["home-page"],
     queryFn: () =>
       axios.get(`${url}home-page?populate=deep`).then((res) => res.data),
   });
