@@ -1,3 +1,10 @@
+import {
+  childrenContainerClassName,
+  featureContainerClassName,
+  priceItemClassName,
+  textClassName,
+  titleClassName,
+} from "./classNames";
 import { PriceItemProps } from "./types";
 
 export const PriceItem = ({
@@ -17,24 +24,19 @@ export const PriceItem = ({
   const textStyle = textColor ? { color: textColor } : undefined;
 
   return (
-    <div
-      style={containerStyle}
-      className="flex flex-col w-full p-6 gap-4 rounded-3xl"
-    >
-      <h3 style={textStyle} className="text-xl font-semibold  text-center">
+    <div style={containerStyle} className={priceItemClassName}>
+      <h3 style={textStyle} className={titleClassName}>
         {title}
       </h3>
       {features.map((feature) => (
-        <div className="flex flex-row gap-2" key={feature.feature}>
+        <div className={featureContainerClassName} key={feature.feature}>
           {feature.isAvailable ? enabledIcon : disabledIcon}
-          <p style={textStyle} className="text-md">
+          <p style={textStyle} className={textClassName}>
             {feature.feature}
           </p>
         </div>
       ))}
-      <div className="flex flex-col w-full h-12 justify-center items-center">
-        {children}
-      </div>
+      <div className={childrenContainerClassName}>{children}</div>
     </div>
   );
 };

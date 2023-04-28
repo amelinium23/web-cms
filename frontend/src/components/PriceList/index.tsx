@@ -3,10 +3,16 @@ import { PriceItem } from "./components/Price";
 import { PriceListProps } from "./types";
 import Image from "next/image";
 import { checkMark, xMark } from "@/assets";
+import {
+  priceContainerClassName,
+  settingsPageContainerClassName,
+  settingsPagePricesContainerClassName,
+  titleClassName,
+} from "./classNames";
 
 export const PriceList = ({ isHomePage, prices }: PriceListProps) => {
   return isHomePage ? (
-    <div className="flex w-full flex-row gap-6 bg-white">
+    <div className={priceContainerClassName}>
       {prices.map((price) => (
         <PriceItem
           key={price.name}
@@ -24,9 +30,9 @@ export const PriceList = ({ isHomePage, prices }: PriceListProps) => {
       ))}
     </div>
   ) : (
-    <div className="flex flex-col w-full gap-8 p-8 mt-8 bg-white border-2 rounded-3xl border-black">
-      <h2 className="text-2xl font-bold">Cennik</h2>
-      <div className="flex flex-row w-full gap-8 justify-around">
+    <div className={settingsPageContainerClassName}>
+      <h2 className={titleClassName}>Cennik</h2>
+      <div className={settingsPagePricesContainerClassName}>
         {prices.map((price) => (
           <PriceItem
             key={price.name}

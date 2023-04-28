@@ -5,6 +5,12 @@ import arrow from "../../assets/arrow.svg";
 import Image from "next/image";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { SidebarProps } from "./types";
+import {
+  buttonsContainerClassName,
+  progressBarContainerClassName,
+  sidebarContainerClassName,
+  textClassName,
+} from "./classNames";
 
 export const Sidebar = ({ sidebar }: SidebarProps) => {
   const containerStyle = {
@@ -16,11 +22,8 @@ export const Sidebar = ({ sidebar }: SidebarProps) => {
   const { buttons } = sidebar;
 
   return (
-    <div
-      style={containerStyle}
-      className="flex flex-col h-screen p-6 items-stretch justify-between"
-    >
-      <div className="flex flex-col h-full gap-2 justify-start items-baseline">
+    <div style={containerStyle} className={sidebarContainerClassName}>
+      <div className={buttonsContainerClassName}>
         <Button
           content={buttons[0].content}
           backgroundColor={buttons[0].backgroundColor}
@@ -38,7 +41,7 @@ export const Sidebar = ({ sidebar }: SidebarProps) => {
           icon={<Image src={humans} width={20} height={20} alt="arrow" />}
         />
       </div>
-      <div className="flex flex-col h-full w-full justify-end gap-4 items-center">
+      <div className={progressBarContainerClassName}>
         <Button
           content={buttons[2].content}
           backgroundColor={buttons[2].backgroundColor}
@@ -54,7 +57,7 @@ export const Sidebar = ({ sidebar }: SidebarProps) => {
           baseBgColor="#337439"
           bgColor="#E6EEE6"
         />
-        <span className="text-xs text-[#9BBFD4]">{sidebar.header.title}</span>
+        <span className={textClassName}>{sidebar.header.title}</span>
         <Button
           content={buttons[3].content}
           textColor={buttons[3].textColor}
