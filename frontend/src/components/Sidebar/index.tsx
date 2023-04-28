@@ -4,14 +4,15 @@ import humans from "../../assets/humans.svg";
 import arrow from "../../assets/arrow.svg";
 import Image from "next/image";
 import ProgressBar from "@ramonak/react-progress-bar";
-import { Sidebar as TSideBar } from "@/types/settingsPageTypes";
+import { SidebarProps } from "./types";
 
-export const Sidebar = ({ sidebar }: { sidebar: TSideBar }) => {
+export const Sidebar = ({ sidebar }: SidebarProps) => {
   const containerStyle = {
     boxShadow:
       "0px 5px 15px rgba(0, 0, 0, 0.25), inset 0px 5px 15px rgba(255, 255, 255, 0.25)",
   };
 
+  if (!sidebar) return <></>;
   const { buttons } = sidebar;
 
   return (
@@ -55,11 +56,11 @@ export const Sidebar = ({ sidebar }: { sidebar: TSideBar }) => {
         />
         <span className="text-xs text-[#9BBFD4]">{sidebar.header.title}</span>
         <Button
-          content="Kup miejsce"
-          textColor="#055F94"
-          hoverColor="#055F94"
+          content={buttons[3].content}
+          textColor={buttons[3].textColor}
+          hoverColor={buttons[3].hoverColor}
           href=""
-          backgroundColor="white"
+          backgroundColor={buttons[3].backgroundColor}
         />
       </div>
     </div>

@@ -3,7 +3,7 @@ import { IntegrationProps } from "./types";
 export const Integration = ({ integration }: IntegrationProps) => {
   return (
     <div
-      className="flex flex-row gap-2 w-[180px] justify-start items-center hover:cursor-pointer p-2 hover:shadow-lg rounded-xl"
+      className="flex flex-row gap-2 w-[180px] justify-start border border-gray-200 items-center hover:cursor-pointer p-2 hover:shadow-lg rounded-xl"
       key={integration.name}
     >
       {integration.icon && <div>{integration.icon}</div>}

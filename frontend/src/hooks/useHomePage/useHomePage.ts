@@ -8,17 +8,15 @@ const url = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:1337/api/";
 export const mapHomePage = (data: StrapiHomPageResponse) => {
   if (!data) return { content, header: { title: "CloudDrive" } };
 
-  const { data: cmsData } = data;
-
   return {
-    content: cmsData.attributes.content || content,
-    header: cmsData.attributes.header || { header: { title: "CloudDrive" } },
+    content,
+    header: { title: "CloudDrive" },
   };
 };
 
 export const useHomePage = () => {
   const { data } = useQuery({
-    queryKey: ["header"],
+    queryKey: ["home-page"],
     queryFn: () =>
       axios.get(`${url}home-page?populate=deep`).then((res) => res.data),
   });

@@ -22,14 +22,14 @@ export const ContentBlockRight = ({
     <div className="flex h-full flex-row gap-4">
       <div style={shadowStyle} className={textContainerClassName}>
         <h2 className={titleClassName}>{title}</h2>
-        <div className="flex flex-row flex-wrap w-full gap-4">
+        <div className="flex flex-row flex-wrap w-full g gap-4">
           {tags.map((tag) => (
             <div
               style={{
                 color: tag.textColor,
                 backgroundColor: tag.backgroundColor,
               }}
-              className="flex flex-row px-2 py-1 font-semibold items-center justify-center rounded-xl"
+              className="flex flex-row px-1 py-1 gap-2 font-sans font-semibold rounded-xl"
               key={tag.name}
             >
               <Image src={checkMark} width={20} height={20} alt="" />

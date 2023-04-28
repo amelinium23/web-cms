@@ -217,6 +217,14 @@ export const sidebar = {
       link: null,
     },
     {
+      id: 14,
+      content: "Dodaj pliki",
+      hoverColor: "#055F94",
+      backgroundColor: "white",
+      textColor: "#055F94",
+      link: null,
+    },
+    {
       id: 13,
       content: "Kup miejsce",
       hoverColor: null,

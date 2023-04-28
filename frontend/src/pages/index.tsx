@@ -48,6 +48,7 @@ export default function Home() {
           />
         ))}
         <div
+          id="prices"
           style={{ width: "1130px" }}
           className="flex flex-col items-center justify-center mx-auto"
         >

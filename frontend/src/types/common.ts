@@ -4,10 +4,10 @@ export interface StrapiMediaResponse {
 
 export interface ImageData {
   id: number;
-  attributes: FluffyAttributes;
+  attributes: ImageAttributes;
 }
 
-export interface FluffyAttributes {
+export interface ImageAttributes {
   name: string;
   alternativeText: null | string;
   caption: null | string;
@@ -77,13 +77,13 @@ export interface Input {
   id: number;
   label: string;
   placeholder: string;
-  backgroundColor: null;
-  hoverBackgroundColor: null;
+  backgroundColor: string | null;
+  hoverBackgroundColor: string | null;
   type: string;
 }
 
 export interface Header {
   id: number;
   title: string;
-  userText: null | string;
+  userText: string | null;
 }

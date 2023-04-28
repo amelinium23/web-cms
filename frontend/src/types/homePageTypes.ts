@@ -1,4 +1,3 @@
-import { StaticImageData } from "next/image";
 import { Button, StrapiMediaResponse, Tag } from "./common";
 import { HeaderAttributes } from "./strapiTypes";
 
@@ -23,7 +22,7 @@ export interface Content {
   title: string;
   description: string;
   imageLeft: boolean;
-  image: StrapiMediaResponse | StaticImageData;
+  image: StrapiMediaResponse | null;
   tags: Tag[];
   button: Button | null;
 }
