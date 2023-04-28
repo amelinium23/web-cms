@@ -4,6 +4,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import gears from "../../assets/gears.svg";
 import { useHeader } from "@/hooks/useHeader";
+import {
+  buttonsContainerClassName,
+  headerContainerClassName,
+  logoContainerClassName,
+  messageClassName,
+  messageContainerClassName,
+} from "./classNames";
 
 export const Header = () => {
   const router = useRouter();
@@ -15,24 +22,21 @@ export const Header = () => {
   const { logo, message, buttons } = data;
 
   return (
-    <div
-      style={headerStyle}
-      className="flex w-[90] h-19 px-4 py-4 justify-around items-center"
-    >
-      <div className="flex w-full h-10 text-lg justify-start items-center">
+    <div style={headerStyle} className={headerContainerClassName}>
+      <div className={logoContainerClassName}>
         <Link href="/">
           <Image src={logo} alt="CloudDrive logo" height={40} width={250} />
         </Link>
       </div>
       {isLoggedIn ? (
-        <div className="flex justify-end w-full items-center gap-5">
-          <div className="text-md font-sans font-semibold">{message}</div>
+        <div className={messageContainerClassName}>
+          <div className={messageClassName}>{message}</div>
           <Link href="/settings">
             <Image src={gears} width={40} height={40} alt="arrow" />
           </Link>
         </div>
       ) : (
-        <div className="flex justify-start items-start gap-5">
+        <div className={buttonsContainerClassName}>
           {buttons.map((button) => (
             <Button
               key={`${button.content}-${button.backgroundColor}`}

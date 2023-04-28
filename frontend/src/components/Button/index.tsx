@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { HTMLProps, ReactNode, ReactSVGElement } from "react";
+import {
+  buttonTextClassName,
+  generateButtonContainerClassName,
+} from "./classNames";
 
 type ButtonProps = {
   backgroundColor: string;
@@ -21,26 +25,22 @@ export const Button = ({
 }: ButtonProps) => {
   const style = {
     backgroundColor: backgroundColor,
+    color: textColor,
   };
-
+  const textClassName = buttonTextClassName(textColor as `#${string}`);
   const buttonContent = href ? (
-    <Link
-      style={{ color: textColor }}
-      className={`text-md text-center font-bold`}
-      href={href}
-    >
+    <Link className={textClassName} href={href}>
       {content}
     </Link>
   ) : (
-    <p style={{ color: textColor }} className={`text-md text-center font-bold`}>
-      {content}
-    </p>
+    <p className={textClassName}>{content}</p>
+  );
+  const buttonContainerClassName = generateButtonContainerClassName(
+    hoverColor as `#${string}`
   );
 
-  const className = `flex gap-2 h-10  justify-center items-center rounded-xl px-2 hover:bg-[${hoverColor}] disabled:bg-[#9BBFD4] hover:shadow-lg`;
-
   return (
-    <button style={style} className={className} {...props}>
+    <button style={style} className={buttonContainerClassName} {...props}>
       {icon && icon}
       {buttonContent}
     </button>

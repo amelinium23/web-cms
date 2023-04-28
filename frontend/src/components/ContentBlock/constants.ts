@@ -11,9 +11,15 @@ const shadowStyle = {
     "0px 5px 15px rgba(0, 0, 0, 0.25), inset 0px 5px 15px rgba(255, 255, 255, 0.25)",
 };
 
+const contentBlockClassName = "flex h-full flex-row gap-4";
+
+const tagContainerClassName = "flex flex-row flex-wrap w-full gap-4";
+
 export {
   titleClassName,
   imageContainerClassName,
   textContainerClassName,
   shadowStyle,
+  contentBlockClassName,
+  tagContainerClassName,
 };

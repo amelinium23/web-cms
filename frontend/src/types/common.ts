@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface StrapiMediaResponse {
   data: ImageData;
 }
@@ -70,7 +72,7 @@ export interface Tag {
   name: string;
   backgroundColor: string;
   textColor: string;
-  icon: StrapiMediaResponse;
+  icon: StaticImageData;
 }
 
 export interface Input {

@@ -1,13 +1,15 @@
 import { RichText } from "@/components/RichText";
 import { ContentBlockProps } from "../../types";
 import {
+  contentBlockClassName,
   imageContainerClassName,
   shadowStyle,
+  tagContainerClassName,
   textContainerClassName,
   titleClassName,
 } from "../../constants";
 import Image from "next/image";
-import { checkMark } from "@/assets";
+import { TagsList } from "../Tags";
 
 export const ContentBlockRight = ({
   title,
@@ -19,23 +21,11 @@ export const ContentBlockRight = ({
   if (!tags) return <></>;
 
   return (
-    <div className="flex h-full flex-row gap-4">
+    <div className={contentBlockClassName}>
       <div style={shadowStyle} className={textContainerClassName}>
         <h2 className={titleClassName}>{title}</h2>
-        <div className="flex flex-row flex-wrap w-full g gap-4">
-          {tags.map((tag) => (
-            <div
-              style={{
-                color: tag.textColor,
-                backgroundColor: tag.backgroundColor,
-              }}
-              className="flex flex-row px-1 py-1 gap-2 font-sans font-semibold rounded-xl"
-              key={tag.name}
-            >
-              <Image src={checkMark} width={20} height={20} alt="" />
-              {tag.name}
-            </div>
-          ))}
+        <div className={tagContainerClassName}>
+          <TagsList tags={tags} />
         </div>
         <RichText markdown={description} />
         <div>{children}</div>

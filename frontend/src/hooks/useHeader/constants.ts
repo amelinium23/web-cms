@@ -12,8 +12,8 @@ const buttons = [
     content: "Cennik",
     hoverColor: "#E6EFF4",
     backgroundColor: "#FFFFFF",
-    textColor: "black",
-    link: "/",
+    textColor: "#000000",
+    link: "#prices",
   },
   {
     id: 4,
@@ -28,7 +28,7 @@ const buttons = [
     content: "Logowanie",
     hoverColor: "#E6EFF4",
     backgroundColor: "#055F94",
-    textColor: "white",
+    textColor: "#FFFFFF",
     link: "/login",
   },
 ];

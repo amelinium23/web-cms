@@ -16,5 +16,5 @@ export type Tag = {
   id: number;
   backgroundColor: string;
   textColor: string;
-  icon: StrapiMediaResponse | StaticImageData;
+  icon: StaticImageData;
 };
