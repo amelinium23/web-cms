@@ -1,9 +1,11 @@
 ## Cloudrive project
 ---
-This project is implementation of the design for Web interfaces and CMS on TUL. The designs was created on figma.
+This project was about creating an SaaS project. As for now this was an creating an solution for storing files online and sharing them with just use of links.
+
+This repo contains implementation of the design for Web interfaces and CMS on TUL. The designs was created on figma.
 
 ### Project stracture
-There is two directories:
+There is two directories in *apps*:
 - *cms* - this directory contains all of the strapi code
 - *frontend* - this directory contains the all of the Next.js code using pages directory
 
