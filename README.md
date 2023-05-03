@@ -9,10 +9,15 @@ There is two directories in *apps*:
 - *cms* - this directory contains all of the strapi code
 - *frontend* - this directory contains the all of the Next.js code using pages directory
 
+To run with Turorepo:
+```sh
+sudo npm run dev
+```
+
 To run Strapi project:
 ```sh
 cd cms
-yarn develop
+npm run dev
 ```
 
 To run Next.js app:

@@ -1,4 +1,9 @@
 {
-  "workspaces": ["apps/*"],
-  "packageManager": "npm@9.6.5"
+  "workspaces": [
+    "apps/*"
+  ],
+  "packageManager": "npm@9.6.5",
+  "scripts": {
+    "dev": "turbo run dev"
+  }
 }
