@@ -1,4 +1,4 @@
-import { Button, Header, Input } from "./common";
+import { Button, Header, Input } from './common';
 
 export interface StrapiRegisterPageResponse {
   data: Data;

@@ -1,6 +1,8 @@
-import React from "react";
-import { ContentBlockProps } from "../../types";
-import { RichText } from "@/components/RichText";
+import Image from 'next/image';
+import React from 'react';
+
+import { RichText } from '@/components/RichText';
+
 import {
   contentBlockClassName,
   imageContainerClassName,
@@ -8,10 +10,9 @@ import {
   tagContainerClassName,
   textContainerClassName,
   titleClassName,
-} from "../../constants";
-import Image from "next/image";
-import { checkMark } from "@/assets";
-import { TagsList } from "../Tags";
+} from '../../constants';
+import { ContentBlockProps } from '../../types';
+import { TagsList } from '../Tags';
 
 export const ContentBlockLeft = ({
   title,

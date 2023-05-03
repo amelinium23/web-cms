@@ -1,9 +1,9 @@
-import { Button } from "@/components";
-import { ContentBlock } from "@/components/ContentBlock";
-import { Page } from "@/components/Page";
-import { PriceList } from "@/components/PriceList";
-import { useSettingsPage } from "@/hooks";
-import { useHomePage } from "@/hooks/useHomePage/useHomePage";
+import { Button } from '@/components';
+import { ContentBlock } from '@/components/ContentBlock';
+import { Page } from '@/components/Page';
+import { PriceList } from '@/components/PriceList';
+import { useSettingsPage } from '@/hooks';
+import { useHomePage } from '@/hooks/useHomePage/useHomePage';
 
 export default function Home() {
   const data = useHomePage();
@@ -14,10 +14,10 @@ export default function Home() {
   const { prices } = settingsPageData;
 
   return (
-    <Page title={header.title || "CloudDrive"}>
+    <Page title={header.title || 'CloudDrive'}>
       <main
-        style={{ maxWidth: "1300px" }}
-        className="flex flex-col h-full justify-center items-center gap-10 px-20 py-20 my-auto mx-auto"
+        style={{ maxWidth: '1300px' }}
+        className="m-auto flex h-full flex-col items-center justify-center gap-10 p-20"
       >
         {content.slice(0, 1).map((contentBlock: any) => (
           <ContentBlock
@@ -49,8 +49,8 @@ export default function Home() {
         ))}
         <div
           id="prices"
-          style={{ width: "1130px" }}
-          className="flex flex-col items-center justify-center mx-auto"
+          style={{ width: '1130px' }}
+          className="mx-auto flex flex-col items-center justify-center"
         >
           <PriceList prices={prices} isHomePage />
         </div>

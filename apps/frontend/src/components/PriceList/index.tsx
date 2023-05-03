@@ -1,14 +1,16 @@
-import React from "react";
-import { PriceItem } from "./components/Price";
-import { PriceListProps } from "./types";
-import Image from "next/image";
-import { checkMark, xMark } from "@/assets";
+import Image from 'next/image';
+import React from 'react';
+
+import { checkMark, xMark } from '@/assets';
+
 import {
   priceContainerClassName,
   settingsPageContainerClassName,
   settingsPagePricesContainerClassName,
   titleClassName,
-} from "./classNames";
+} from './classNames';
+import { PriceItem } from './components/Price';
+import { PriceListProps } from './types';
 
 export const PriceList = ({ isHomePage, prices }: PriceListProps) => {
   return isHomePage ? (

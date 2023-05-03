@@ -1,9 +1,10 @@
-import Link from "next/link";
-import { HTMLProps, ReactNode, ReactSVGElement } from "react";
+import Link from 'next/link';
+import { HTMLProps, ReactNode } from 'react';
+
 import {
   buttonTextClassName,
   generateButtonContainerClassName,
-} from "./classNames";
+} from './classNames';
 
 type ButtonProps = {
   backgroundColor: string;
@@ -12,7 +13,7 @@ type ButtonProps = {
   href: string | null;
   content: string;
   icon?: ReactNode;
-} & Omit<HTMLProps<HTMLButtonElement>, "type">;
+} & Omit<HTMLProps<HTMLButtonElement>, 'type'>;
 
 export const Button = ({
   backgroundColor,

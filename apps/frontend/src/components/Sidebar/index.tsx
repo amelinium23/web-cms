@@ -1,21 +1,22 @@
-import React from "react";
-import { Button } from "../Button";
-import humans from "../../assets/humans.svg";
-import arrow from "../../assets/arrow.svg";
-import Image from "next/image";
-import ProgressBar from "@ramonak/react-progress-bar";
-import { SidebarProps } from "./types";
+import ProgressBar from '@ramonak/react-progress-bar';
+import Image from 'next/image';
+import React from 'react';
+
+import arrow from '../../assets/arrow.svg';
+import humans from '../../assets/humans.svg';
+import { Button } from '../Button';
 import {
   buttonsContainerClassName,
   progressBarContainerClassName,
   sidebarContainerClassName,
   textClassName,
-} from "./classNames";
+} from './classNames';
+import { SidebarProps } from './types';
 
 export const Sidebar = ({ sidebar }: SidebarProps) => {
   const containerStyle = {
     boxShadow:
-      "0px 5px 15px rgba(0, 0, 0, 0.25), inset 0px 5px 15px rgba(255, 255, 255, 0.25)",
+      '0px 5px 15px rgba(0, 0, 0, 0.25), inset 0px 5px 15px rgba(255, 255, 255, 0.25)',
   };
 
   if (!sidebar) return <></>;

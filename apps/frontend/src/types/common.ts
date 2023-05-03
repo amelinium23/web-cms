@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import { StaticImageData } from 'next/image';
 
 export interface StrapiMediaResponse {
   data: ImageData;
@@ -17,20 +17,14 @@ export interface ImageAttributes {
   height: number;
   formats: Formats | null;
   hash: string;
-  ext: EXT;
-  mime: MIME;
+  ext: '.png' | '.svg';
   size: number;
   url: string;
   previewUrl: null;
-  provider: Provider;
+  provider: 'local';
   provider_metadata: null;
   createdAt: Date;
   updatedAt: Date;
-}
-
-export enum EXT {
-  PNG = ".png",
-  SVG = ".svg",
 }
 
 export interface Formats {
@@ -38,24 +32,14 @@ export interface Formats {
 }
 
 export interface Thumbnail {
-  ext: EXT;
+  ext: '.png' | '.svg';
   url: string;
   hash: string;
-  mime: MIME;
   name: string;
   path: null;
   size: number;
   width: number;
   height: number;
-}
-
-export enum MIME {
-  ImagePNG = "image/png",
-  ImageSVGXML = "image/svg+xml",
-}
-
-export enum Provider {
-  Local = "local",
 }
 
 export interface Button {

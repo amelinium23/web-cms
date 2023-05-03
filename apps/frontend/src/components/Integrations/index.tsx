@@ -1,8 +1,9 @@
-import Image from "next/image";
-import { Input } from "../Input";
-import { Integration } from "./components/Integration";
-import { checkMark } from "@/assets";
-import { Integrations as TIntegrations } from "@/types";
+import Image from 'next/image';
+
+import { checkMark } from '@/assets';
+import { Integrations as TIntegrations } from '@/types';
+
+import { Input } from '../Input';
 import {
   integrationContainerClassName,
   integrationsClassName,
@@ -10,7 +11,8 @@ import {
   subSectionClassName,
   subTitleClassName,
   titleClassName,
-} from "./classNames";
+} from './classNames';
+import { Integration } from './components/Integration';
 
 export const Integrations = ({
   integrations,

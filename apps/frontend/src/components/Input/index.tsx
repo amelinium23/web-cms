@@ -2,8 +2,8 @@ import {
   inputClassName,
   inputContainerClassName,
   labelClassName,
-} from "./classNames";
-import { InputProps } from "./types";
+} from './classNames';
+import { InputProps } from './types';
 
 export const Input = ({ id, label, type, ...inputProps }: InputProps) => {
   return (

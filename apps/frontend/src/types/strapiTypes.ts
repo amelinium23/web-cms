@@ -1,4 +1,4 @@
-import { Button, ImageData } from "./common";
+import { Button, ImageData } from './common';
 
 export interface StrapiHeaderResponse {
   data: StrapiHeaderResponseData;

@@ -1,9 +1,9 @@
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
-import { StrapiLoginPageResponse } from "@/types/loginPage";
-import { buttons, header, inputs } from "./constants";
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
-const url = process.env.NEXT_PUBLIC_CMS_URL;
+import { StrapiLoginPageResponse } from '@/types/loginPage';
+
+import { buttons, header, inputs } from './constants';
 
 export const mapLoginPage = (data: StrapiLoginPageResponse) => {
   if (!data) return { header, inputs, buttons };
@@ -19,7 +19,7 @@ export const mapLoginPage = (data: StrapiLoginPageResponse) => {
 
 export const useLoginPage = () => {
   const { data } = useQuery({
-    queryKey: ["login"],
+    queryKey: ['login'],
     queryFn: () =>
       axios
         .get(`https://web-cms-i.onrender.com/api/login-page?populate=deep`)

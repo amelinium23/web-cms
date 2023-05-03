@@ -1,6 +1,6 @@
-import { ContentBlockLeft } from "./components/ContentBlockLeft";
-import { ContentBlockRight } from "./components/ContentBlockRight";
-import { ContentBlockProps } from "./types";
+import { ContentBlockLeft } from './components/ContentBlockLeft';
+import { ContentBlockRight } from './components/ContentBlockRight';
+import { ContentBlockProps } from './types';
 
 export const ContentBlock = ({
   title,

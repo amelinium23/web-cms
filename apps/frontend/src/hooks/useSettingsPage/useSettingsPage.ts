@@ -1,4 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+
+import { StrapiSettingsPageResponse } from '@/types/settingsPageTypes';
+
 import {
   buttons,
   header,
@@ -6,9 +10,7 @@ import {
   integrations,
   prices,
   sidebar,
-} from "./constants";
-import axios from "axios";
-import { StrapiSettingsPageResponse } from "@/types/settingsPageTypes";
+} from './constants';
 
 const defaultSettingsPageData = {
   input: input,
@@ -19,7 +21,7 @@ const defaultSettingsPageData = {
   sidebar: sidebar,
 };
 
-const url = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:1337/api/";
+const url = process.env.NEXT_PUBLIC_CMS_URL || 'http://localhost:1337/api/';
 
 const mapSettingsPage = (settingsPageData: StrapiSettingsPageResponse) => {
   if (!settingsPageData) return defaultSettingsPageData;
@@ -37,7 +39,7 @@ const mapSettingsPage = (settingsPageData: StrapiSettingsPageResponse) => {
 
 export const useSettingsPage = () => {
   const { data } = useQuery({
-    queryKey: ["settingsPage"],
+    queryKey: ['settingsPage'],
     queryFn: () =>
       axios.get(`${url}settings-page?populate=deep`).then((res) => res.data),
   });

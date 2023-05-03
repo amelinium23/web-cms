@@ -1,6 +1,5 @@
-import { ImageData, StrapiMediaResponse } from "@/types";
-import { StaticImageData } from "next/image";
-import { ReactNode } from "react";
+import { StaticImageData } from 'next/image';
+import { ReactNode } from 'react';
 
 export type ContentBlockProps = {
   title: string;

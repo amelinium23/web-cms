@@ -1,5 +1,5 @@
-import { integrationItemClassName, textClassName } from "./classNames";
-import { IntegrationProps } from "./types";
+import { integrationItemClassName, textClassName } from './classNames';
+import { IntegrationProps } from './types';
 
 export const Integration = ({ integration }: IntegrationProps) => {
   return (

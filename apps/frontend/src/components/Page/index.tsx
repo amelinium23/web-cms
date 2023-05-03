@@ -1,5 +1,6 @@
-import Head from "next/head";
-import { PageProps } from "./types";
+import Head from 'next/head';
+
+import { PageProps } from './types';
 
 export const Page = ({ title, children }: PageProps) => {
   return (

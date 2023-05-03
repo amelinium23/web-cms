@@ -4,8 +4,8 @@ import {
   priceItemClassName,
   textClassName,
   titleClassName,
-} from "./classNames";
-import { PriceItemProps } from "./types";
+} from './classNames';
+import { PriceItemProps } from './types';
 
 export const PriceItem = ({
   title,

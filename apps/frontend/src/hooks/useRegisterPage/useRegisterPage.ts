@@ -1,7 +1,9 @@
-import { StrapiRegisterPageResponse } from "@/types/registerPageTypes";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import { button, header, inputs } from "./constants";
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
+
+import { StrapiRegisterPageResponse } from '@/types/registerPageTypes';
+
+import { button, header, inputs } from './constants';
 
 const defaultResponse = {
   inputs: inputs,
@@ -9,7 +11,7 @@ const defaultResponse = {
   header: header,
 };
 
-const url = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:1337/api/";
+const url = process.env.NEXT_PUBLIC_CMS_URL || 'http://localhost:1337/api/';
 
 const mapRegisterPage = (data: StrapiRegisterPageResponse) => {
   if (!data) return defaultResponse;
@@ -23,7 +25,7 @@ const mapRegisterPage = (data: StrapiRegisterPageResponse) => {
 
 export const useRegisterPage = () => {
   const { data } = useQuery({
-    queryKey: ["register"],
+    queryKey: ['register'],
     queryFn: () =>
       axios.get(`${url}register-page?populate=deep`).then((res) => res.data),
   });

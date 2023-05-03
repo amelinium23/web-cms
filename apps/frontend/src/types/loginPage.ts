@@ -1,5 +1,5 @@
-import { Button, Input } from "./common";
-import { HeaderAttributes } from "./strapiTypes";
+import { Button, Input } from './common';
+import { HeaderAttributes } from './strapiTypes';
 
 export interface StrapiLoginPageResponse {
   data: Data;

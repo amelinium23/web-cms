@@ -1,7 +1,9 @@
-import { checkMark } from "@/assets";
-import Image from "next/image";
-import { TagTileProps } from "./types";
-import { tagTileClassName } from "./classNames";
+import Image from 'next/image';
+
+import { checkMark } from '@/assets';
+
+import { tagTileClassName } from './classNames';
+import { TagTileProps } from './types';
 
 export const TagTile = ({ tag }: TagTileProps) => {
   const tagStyle = {
